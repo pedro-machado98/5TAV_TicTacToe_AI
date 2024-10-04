@@ -1,0 +1,516 @@
+Jogos realizados: 1
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 1
+Vitórias do Jogador Estratégico: 0
+Empates: 0
+
+Jogos realizados: 2
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 2
+Vitórias do Jogador Estratégico: 0
+Empates: 0
+
+Jogos realizados: 3
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 3
+Vitórias do Jogador Estratégico: 0
+Empates: 0
+
+Jogos realizados: 4
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 4
+Vitórias do Jogador Estratégico: 0
+Empates: 0
+
+Jogos realizados: 5
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 5
+Vitórias do Jogador Estratégico: 0
+Empates: 0
+
+Jogos realizados: 6
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 6
+Vitórias do Jogador Estratégico: 0
+Empates: 0
+
+Jogos realizados: 7
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 7
+Vitórias do Jogador Estratégico: 0
+Empates: 0
+
+Jogos realizados: 8
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 7
+Vitórias do Jogador Estratégico: 0
+Empates: 1
+
+Jogos realizados: 9
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 8
+Vitórias do Jogador Estratégico: 0
+Empates: 1
+
+Jogos realizados: 10
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 9
+Vitórias do Jogador Estratégico: 0
+Empates: 1
+
+Jogos realizados: 11
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 10
+Vitórias do Jogador Estratégico: 0
+Empates: 1
+
+Jogos realizados: 12
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 11
+Vitórias do Jogador Estratégico: 0
+Empates: 1
+
+Jogos realizados: 13
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 12
+Vitórias do Jogador Estratégico: 0
+Empates: 1
+
+Jogos realizados: 14
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 13
+Vitórias do Jogador Estratégico: 0
+Empates: 1
+
+Jogos realizados: 15
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 13
+Vitórias do Jogador Estratégico: 0
+Empates: 2
+
+Jogos realizados: 16
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 14
+Vitórias do Jogador Estratégico: 0
+Empates: 2
+
+Jogos realizados: 17
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 15
+Vitórias do Jogador Estratégico: 0
+Empates: 2
+
+Jogos realizados: 18
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 16
+Vitórias do Jogador Estratégico: 0
+Empates: 2
+
+Jogos realizados: 19
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 17
+Vitórias do Jogador Estratégico: 0
+Empates: 2
+
+Jogos realizados: 20
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 18
+Vitórias do Jogador Estratégico: 0
+Empates: 2
+
+Jogos realizados: 21
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 19
+Vitórias do Jogador Estratégico: 0
+Empates: 2
+
+Jogos realizados: 22
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 20
+Vitórias do Jogador Estratégico: 0
+Empates: 2
+
+Jogos realizados: 23
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 21
+Vitórias do Jogador Estratégico: 0
+Empates: 2
+
+Jogos realizados: 24
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 22
+Vitórias do Jogador Estratégico: 0
+Empates: 2
+
+Jogos realizados: 25
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 23
+Vitórias do Jogador Estratégico: 0
+Empates: 2
+
+Jogos realizados: 26
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 24
+Vitórias do Jogador Estratégico: 0
+Empates: 2
+
+Jogos realizados: 27
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 24
+Vitórias do Jogador Estratégico: 0
+Empates: 3
+
+Jogos realizados: 28
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 25
+Vitórias do Jogador Estratégico: 0
+Empates: 3
+
+Jogos realizados: 29
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 26
+Vitórias do Jogador Estratégico: 0
+Empates: 3
+
+Jogos realizados: 30
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 27
+Vitórias do Jogador Estratégico: 0
+Empates: 3
+
+Jogos realizados: 31
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 28
+Vitórias do Jogador Estratégico: 0
+Empates: 3
+
+Jogos realizados: 32
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 29
+Vitórias do Jogador Estratégico: 0
+Empates: 3
+
+Jogos realizados: 33
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 29
+Vitórias do Jogador Estratégico: 0
+Empates: 4
+
+Jogos realizados: 34
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 30
+Vitórias do Jogador Estratégico: 0
+Empates: 4
+
+Jogos realizados: 35
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 30
+Vitórias do Jogador Estratégico: 0
+Empates: 5
+
+Jogos realizados: 36
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 31
+Vitórias do Jogador Estratégico: 0
+Empates: 5
+
+Jogos realizados: 37
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 32
+Vitórias do Jogador Estratégico: 0
+Empates: 5
+
+Jogos realizados: 38
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 33
+Vitórias do Jogador Estratégico: 0
+Empates: 5
+
+Jogos realizados: 39
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 34
+Vitórias do Jogador Estratégico: 0
+Empates: 5
+
+Jogos realizados: 40
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 35
+Vitórias do Jogador Estratégico: 0
+Empates: 5
+
+Jogos realizados: 41
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 36
+Vitórias do Jogador Estratégico: 0
+Empates: 5
+
+Jogos realizados: 42
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 37
+Vitórias do Jogador Estratégico: 0
+Empates: 5
+
+Jogos realizados: 43
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 38
+Vitórias do Jogador Estratégico: 0
+Empates: 5
+
+Jogos realizados: 44
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 39
+Vitórias do Jogador Estratégico: 0
+Empates: 5
+
+Jogos realizados: 45
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 40
+Vitórias do Jogador Estratégico: 0
+Empates: 5
+
+Jogos realizados: 46
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 40
+Vitórias do Jogador Estratégico: 0
+Empates: 6
+
+Jogos realizados: 47
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 41
+Vitórias do Jogador Estratégico: 0
+Empates: 6
+
+Jogos realizados: 48
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 42
+Vitórias do Jogador Estratégico: 0
+Empates: 6
+
+Jogos realizados: 49
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 42
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 50
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 43
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 51
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 44
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 52
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 45
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 53
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 46
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 54
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 47
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 55
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 48
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 56
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 49
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 57
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 50
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 58
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 51
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 59
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 52
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 60
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 53
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 61
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 54
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 62
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 55
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 63
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 56
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 64
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 57
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 65
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 58
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 66
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 59
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 67
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 60
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 68
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 61
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 69
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 62
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 70
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 63
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 71
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 64
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 72
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 65
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 73
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 66
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 74
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 67
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 75
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 68
+Vitórias do Jogador Estratégico: 0
+Empates: 7
+
+Jogos realizados: 76
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 68
+Vitórias do Jogador Estratégico: 0
+Empates: 8
+
+Jogos realizados: 77
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 69
+Vitórias do Jogador Estratégico: 0
+Empates: 8
+
+Jogos realizados: 78
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 70
+Vitórias do Jogador Estratégico: 0
+Empates: 8
+
+Jogos realizados: 79
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 71
+Vitórias do Jogador Estratégico: 0
+Empates: 8
+
+Jogos realizados: 80
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 71
+Vitórias do Jogador Estratégico: 0
+Empates: 9
+
+Jogos realizados: 81
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 72
+Vitórias do Jogador Estratégico: 0
+Empates: 9
+
+Jogos realizados: 82
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 73
+Vitórias do Jogador Estratégico: 0
+Empates: 9
+
+Jogos realizados: 83
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 74
+Vitórias do Jogador Estratégico: 0
+Empates: 9
+
+Jogos realizados: 84
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 75
+Vitórias do Jogador Estratégico: 0
+Empates: 9
+
+Jogos realizados: 85
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 76
+Vitórias do Jogador Estratégico: 0
+Empates: 9
+
+Jogos realizados: 86
+Vitórias do Jogador Humano: 0
+Vitórias do Jogador Aleatório: 77
+Vitórias do Jogador Estratégico: 0
+Empates: 9
+
