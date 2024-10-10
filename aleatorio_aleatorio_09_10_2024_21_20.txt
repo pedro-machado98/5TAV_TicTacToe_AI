@@ -1,0 +1,10 @@
+Relatório do Jogo da Velha
+===========================
+Jogador 1: aleatorio
+Jogador 2: aleatorio
+===========================
+Vitórias do Jogador 1: 5
+Vitórias do Jogador 2: 4
+Empates: 1
+===========================
+Obrigado por jogar!
