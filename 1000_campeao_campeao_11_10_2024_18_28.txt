@@ -1,0 +1,10 @@
+Relatorio do Jogo da Velha
+===========================
+Jogador 1: campeao
+Jogador 2: campeao
+===========================
+Vitorias do Jogador 1: 0
+Vitorias do Jogador 2: 0
+Empates: 1000
+===========================
+Obrigado por jogar!
