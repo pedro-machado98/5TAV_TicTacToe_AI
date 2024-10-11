@@ -1,0 +1,10 @@
+Relatorio do Jogo da Velha
+===========================
+Jogador 1: aleatorio
+Jogador 2: campeao
+===========================
+Vitorias do Jogador 1: 3
+Vitorias do Jogador 2: 91
+Empates: 6
+===========================
+Obrigado por jogar!

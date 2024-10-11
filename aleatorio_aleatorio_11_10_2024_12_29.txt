@@ -3,8 +3,8 @@ Relatorio do Jogo da Velha
 Jogador 1: aleatorio
 Jogador 2: aleatorio
 ===========================
-Vitorias do Jogador 1: 62
-Vitorias do Jogador 2: 25
-Empates: 13
+Vitorias do Jogador 1: 40
+Vitorias do Jogador 2: 43
+Empates: 17
 ===========================
 Obrigado por jogar!
