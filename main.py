@@ -1,211 +1,287 @@
-import tkinter as tk
-from tkinter import ttk, messagebox
-from ttkbootstrap import Style
 import random
 import os
+from datetime import datetime
 
-# Variáveis globais para armazenar resultados do relatório
-vitorias_jogador_aleatorio = 0
-vitorias_jogador_estrategico = 0
-vitorias_jogador_humano = 0
-empates = 0
-jogos_realizados = 0
-total_jogos = 0
-jogador_x = "Humano"
-jogador_o = "Aleatório"
+# Variáveis globais
+maxJogadas = 9
+jogadas = 0
+quemJoga = 1
+vitoria = False
+tabuleiro = [0] * 15  # Incluindo a posição 14 para vitórias do jogador 2
 
-# Função para o jogador aleatório
-def jogador_aleatorio():
-    jogadas_possiveis = [(i, j) for i in range(3) for j in range(3) if jogo[i][j] == '']
-    if jogadas_possiveis:
-        return random.choice(jogadas_possiveis)
-    return None
+# Funções auxiliares
+def simboloJogador(valor):
+    return 'X' if valor == 1 else 'O' if valor == 2 else ' '
 
-# Função para o jogador que não perde (jogadas defensivas)
-def jogador_estrategico():
-    for i in range(3):
-        for j in range(3):
-            if jogo[i][j] == '':
-                # Tenta fazer a jogada e verifica se vence
-                jogo[i][j] = "O"
-                if verificar_vencedor_simples("O"):
-                    return (i, j)
-                jogo[i][j] = ''
-    
-    for i in range(3):
-        for j in range(3):
-            if jogo[i][j] == '':
-                jogo[i][j] = "X"
-                if verificar_vencedor_simples("X"):
-                    jogo[i][j] = ''
-                    return (i, j)
-                jogo[i][j] = ''
-    
-    return jogador_aleatorio()
+def checaVencedor():
+    combinacoesVitoria = [
+        [1, 2, 3], [4, 5, 6], [7, 8, 9],  # Linhas
+        [1, 4, 7], [2, 5, 8], [3, 6, 9],  # Colunas
+        [1, 5, 9], [3, 5, 7]              # Diagonais
+    ]
 
-def fazer_jogada(linha, coluna):
-    global jogador_atual, jogos_realizados
+    for combinacao in combinacoesVitoria:
+        pos1, pos2, pos3 = combinacao
+        if tabuleiro[pos1] == tabuleiro[pos2] == tabuleiro[pos3] != 0:
+            return tabuleiro[pos1]  # Retorna 1 se jogador 1 venceu, ou 2 se jogador 2 venceu
 
-    if jogo[linha][coluna] == '':
-        jogo[linha][coluna] = jogador_atual
-        botoes[linha][coluna].configure(text=jogador_atual)
-        if verificar_vencedor():
-            return
-        jogador_atual = "O" if jogador_atual == "X" else "X"
+    return 0  # Retorna 0 se não houver vencedor
 
-        if jogador_atual == "O" and jogador_o != "Humano":
-            if jogador_o == "Aleatório":
-                jogada = jogador_aleatorio()
-            else:
-                jogada = jogador_estrategico()
-            if jogada:
-                fazer_jogada(jogada[0], jogada[1])
+def exibeTabuleiro():
+    print(f"{simboloJogador(tabuleiro[1])} | {simboloJogador(tabuleiro[2])} | {simboloJogador(tabuleiro[3])}      1|2|3")
+    print(f"{simboloJogador(tabuleiro[4])} | {simboloJogador(tabuleiro[5])} | {simboloJogador(tabuleiro[6])}      4|5|6")
+    print(f"{simboloJogador(tabuleiro[7])} | {simboloJogador(tabuleiro[8])} | {simboloJogador(tabuleiro[9])}      7|8|9")
 
-        if jogador_atual == "X" and jogador_x != "Humano":
-            if jogador_x == "Aleatório":
-                jogada = jogador_aleatorio()
-            else:
-                jogada = jogador_estrategico()
-            if jogada:
-                fazer_jogada(jogada[0], jogada[1])
+def limpaTabuleiro():
+    for i in range(0, 10):
+        tabuleiro[i] = 0
+    tabuleiro[11] = 0  # Resetando o resultado da partida
 
-def verificar_vencedor():
-    global vitorias_jogador_aleatorio, vitorias_jogador_estrategico, vitorias_jogador_humano, empates, jogos_realizados
+def limpaTabuleiroFinal():
+    for i in range(0, 10):
+        tabuleiro[i] = 0
+    # Resetando os contadores de vitórias e empates
+    tabuleiro[10] = 0  # Número de partidas
+    tabuleiro[11] = 0  # Resultado da partida atual
+    tabuleiro[12] = 0  # Vitórias do jogador 1
+    tabuleiro[13] = 0  # Empates
+    tabuleiro[14] = 0  # Vitórias do jogador 2
 
-    combinacoes_vencedoras = (jogo[0], jogo[1], jogo[2],
-                              [jogo[i][0] for i in range(3)],
-                              [jogo[i][1] for i in range(3)],
-                              [jogo[i][2] for i in range(3)],
-                              [jogo[i][i] for i in range(3)],
-                              [jogo[i][2 - i] for i in range(3)])
-    
-    for combinacao in combinacoes_vencedoras:
-        if combinacao[0] == combinacao[1] == combinacao[2] != '':
-            anunciar_vencedor(combinacao[0])
+# Funções de jogadores
+def jogadorHumano(quemJoga):
+    while True:
+        try:
+            posicao = int(input(f"Jogador {quemJoga} ({'X' if quemJoga == 1 else 'O'}), escolha uma posição de 1 a 9: "))
+            if posicao < 1 or posicao > 9:
+                print("Posição inválida! Escolha um número de 1 a 9.")
+                continue
+            if tabuleiro[posicao] != 0:
+                print("Posição já ocupada! Escolha outra posição.")
+                continue
+            tabuleiro[posicao] = quemJoga
+            break
+        except ValueError:
+            print("Entrada inválida! Por favor, insira um número de 1 a 9.")
+
+def jogadorAleatorio():
+    global quemJoga
+    while True:
+        posicao = random.randint(1, 9)
+        if tabuleiro[posicao] == 0:
+            tabuleiro[posicao] = quemJoga
+            print(f"Jogador {quemJoga} ({'X' if quemJoga == 1 else 'O'}) jogou na posição {posicao}")
+            break
+
+def jogadorCampeao(quemJoga):
+    global tabuleiro
+    jogada = melhorJogada(tabuleiro, quemJoga)
+    tabuleiro[jogada] = quemJoga
+    print(f"Jogador {quemJoga} ({'X' if quemJoga == 1 else 'O'}) jogou na posição {jogada}")
+
+def checaVencedorComTabuleiro(tab):
+    combinacoesVitoria = [
+        [1, 2, 3], [4, 5, 6], [7, 8, 9],  # Linhas
+        [1, 4, 7], [2, 5, 8], [3, 6, 9],  # Colunas
+        [1, 5, 9], [3, 5, 7]              # Diagonais
+    ]
+
+    for combinacao in combinacoesVitoria:
+        pos1, pos2, pos3 = combinacao
+        if tab[pos1] == tab[pos2] == tab[pos3] != 0:
+            return tab[pos1]  # Retorna 1 se jogador 1 venceu, ou 2 se jogador 2 venceu
+
+    return 0  # Retorna 0 se não houver vencedor
+
+# Melhorias defensivas com análise preditiva mais profunda
+def melhorJogada(tabuleiro, quemJoga):
+    def podeVencer(tab, jogador):
+        for i in range(1, 10):
+            copiaTab = tab[:]
+            if copiaTab[i] == 0:  # Se a posição está livre
+                copiaTab[i] = jogador
+                if checaVencedorComTabuleiro(copiaTab) == jogador:
+                    return i
+        return None
+
+    def bloqueiaDuplaAmeaca(tab, adversario):
+        ameacas = []
+        for i in range(1, 10):
+            copiaTab = tab[:]
+            if copiaTab[i] == 0:  # Se a posição está livre
+                copiaTab[i] = adversario
+                if podeVencer(copiaTab, adversario):
+                    ameacas.append(i)
+        if len(ameacas) > 1:  # Se há mais de uma ameaça
             return True
-    
-    if all(jogo[i][j] != '' for i in range(3) for j in range(3)):
-        anunciar_vencedor("Empate")
-        return True
+        return False
 
-    return False
+    def minimizaFuturasAmeacas(tab, jogador):
+        adversario = 2 if jogador == 1 else 1
+        for i in range(1, 10):
+            copiaTab = tab[:]
+            if copiaTab[i] == 0:  # Se a posição está livre
+                copiaTab[i] = jogador
+                if not bloqueiaDuplaAmeaca(copiaTab, adversario):
+                    return i
+        return None
 
-def verificar_vencedor_simples(jogador):
-    combinacoes_vencedoras = (jogo[0], jogo[1], jogo[2],
-                              [jogo[i][0] for i in range(3)],
-                              [jogo[i][1] for i in range(3)],
-                              [jogo[i][2] for i in range(3)],
-                              [jogo[i][i] for i in range(3)],
-                              [jogo[i][2 - i] for i in range(3)])
-    
-    for combinacao in combinacoes_vencedoras:
-        if combinacao[0] == combinacao[1] == combinacao[2] == jogador:
-            return True
-    return False
+    def simulaDerrotasFuturas(tab, jogador, profundidade=2):
+        adversario = 2 if jogador == 1 else 1
+        for i in range(1, 10):
+            copiaTab = tab[:]
+            if copiaTab[i] == 0:
+                copiaTab[i] = adversario
+                if podeVencer(copiaTab, adversario):
+                    return True
+                if profundidade > 1 and simulaDerrotasFuturas(copiaTab, jogador, profundidade - 1):
+                    return True
+        return False
 
-def anunciar_vencedor(jogador):
-    global vitorias_jogador_aleatorio, vitorias_jogador_estrategico, vitorias_jogador_humano, empates, jogos_realizados, total_jogos
+    # Primeiro, tenta ganhar imediatamente
+    jogada = podeVencer(tabuleiro, quemJoga)
+    if jogada:
+        return jogada
 
-    if jogador == "Empate":
-        empates += 1
-        mensagem = "É um empate!"
+    # Tenta bloquear qualquer possível vitória do adversário
+    adversario = 2 if quemJoga == 1 else 1
+    jogada = podeVencer(tabuleiro, adversario)
+    if jogada:
+        return jogada
+
+    # Bloqueia ameaças de jogadas duplas
+    if bloqueiaDuplaAmeaca(tabuleiro, adversario):
+        for i in [1, 3, 7, 9, 5]:  # Tenta bloquear nas bordas ou no centro
+            if tabuleiro[i] == 0:
+                return i
+
+    # Prevenção de derrotas futuras com simulação em profundidade
+    for i in range(1, 10):
+        if tabuleiro[i] == 0:
+            copiaTab = tabuleiro[:]
+            copiaTab[i] = quemJoga
+            if not simulaDerrotasFuturas(copiaTab, quemJoga):
+                return i
+
+    # Estratégia de jogar primeiro em um canto, se possível (jogada inicial)
+    if tabuleiro.count(0) == 8:  # Se é a primeira jogada do jogador campeão
+        for posicao in [1, 3, 7, 9]:
+            if tabuleiro[posicao] == 0:
+                return posicao
+
+    # Se a posição central estiver livre, joga no centro
+    if tabuleiro[5] == 0:
+        return 5
+
+    # Se nenhum dos passos anteriores se aplicou, joga em um canto, se possível
+    for posicao in [1, 3, 7, 9]:
+        if tabuleiro[posicao] == 0:
+            return posicao
+
+    # Como último recurso, joga em uma lateral
+    for posicao in [2, 4, 6, 8]:
+        if tabuleiro[posicao] == 0:
+            return posicao
+
+# Função para gerar o relatório do jogo
+def gerarRelatorio(jogador1, jogador2):
+    data_hora_atual = datetime.now()
+    data_formatada = data_hora_atual.strftime("%d_%m_%Y_%H_%M")
+    nome_arquivo = f"{descricaoJogador(jogador1)}_{descricaoJogador(jogador2)}_{data_formatada}.txt"
+
+    with open(nome_arquivo, "w") as arquivo:
+        arquivo.write("Relatorio do Jogo da Velha\n")
+        arquivo.write("===========================\n")
+        arquivo.write(f"Jogador 1: {descricaoJogador(jogador1)}\n")
+        arquivo.write(f"Jogador 2: {descricaoJogador(jogador2)}\n")
+        arquivo.write("===========================\n")
+        arquivo.write(f"Vitorias do Jogador 1: {tabuleiro[12]}\n")
+        arquivo.write(f"Vitorias do Jogador 2: {tabuleiro[14]}\n")
+        arquivo.write(f"Empates: {tabuleiro[13]}\n")
+        arquivo.write("===========================\n")
+        arquivo.write("Obrigado por jogar!\n")
+
+    print(f"Relatório gerado com sucesso em: {os.path.abspath(nome_arquivo)}")
+
+
+
+def descricaoJogador(tipoJogador):
+    if tipoJogador == 'h':
+        return "humano"
+    elif tipoJogador == 'a':
+        return "aleatorio"
+    elif tipoJogador == 'c':
+        return "campeao"
     else:
-        if jogador == "X":
-            if jogador_x == "Humano":
-                vitorias_jogador_humano += 1
-            elif jogador_x == "Aleatório":
-                vitorias_jogador_aleatorio += 1
+        return "desconhecido"
+
+# Função principal do jogo
+def game(jogador1, jogador2, quantidadePartidas):
+    global quemJoga, maxJogadas, vitoria
+
+    while tabuleiro[10] < quantidadePartidas:
+        print(f"\nJogo {tabuleiro[10] + 1}")
+        limpaTabuleiro()
+        exibeTabuleiro()
+        vitoria = False
+        quemJoga = 1 if tabuleiro[10] % 2 == 0 else 2  # Alterna quem começa a cada jogo
+
+        while tabuleiro[0] < maxJogadas:
+            if quemJoga == 1:
+                if jogador1 == 'h':
+                    jogadorHumano(quemJoga)
+                elif jogador1 == 'a':
+                    jogadorAleatorio()
+                elif jogador1 == 'c':
+                    jogadorCampeao(quemJoga)
             else:
-                vitorias_jogador_estrategico += 1
-        else:
-            if jogador_o == "Humano":
-                vitorias_jogador_humano += 1
-            elif jogador_o == "Aleatório":
-                vitorias_jogador_aleatorio += 1
-            else:
-                vitorias_jogador_estrategico += 1
-        mensagem = f"Jogador {jogador} venceu!"
+                if jogador2 == 'h':
+                    jogadorHumano(quemJoga)
+                elif jogador2 == 'a':
+                    jogadorAleatorio()
+                elif jogador2 == 'c':
+                    jogadorCampeao(quemJoga)
 
-    messagebox.showinfo("Fim de Jogo", mensagem)
-    jogos_realizados += 1
-    gerar_relatorio()
+            exibeTabuleiro()
+            vencedor = checaVencedor()
+            if vencedor != 0:
+                print(f"Jogador {'1 (X)' if vencedor == 1 else '2 (O)'} venceu!")
+                tabuleiro[11] = vencedor
+                if vencedor == 1:
+                    tabuleiro[12] += 1  # Vitória do jogador 1
+                else:
+                    tabuleiro[14] += 1  # Vitória do jogador 2
+                vitoria = True
+                break
 
-    if jogos_realizados < total_jogos:
-        reiniciar_jogo()
-    else:
-        messagebox.showinfo("Fim da série", "Todas as partidas foram jogadas!")
-        reiniciar_jogo()
+            tabuleiro[0] += 1
+            quemJoga = 1 if quemJoga == 2 else 2  # Alterna entre os jogadores
 
-def reiniciar_jogo():
-    global jogo, jogador_atual
-    jogo = [['', '', ''] for _ in range(3)]
-    jogador_atual = "X"
-    for linha in botoes:
-        for botao in linha:
-            botao.configure(text='')
+        if not vitoria:
+            tabuleiro[11] = 0
+            tabuleiro[13] += 1  # Empate
+            print("Empate!")
 
-def gerar_relatorio():
-    relatorio = (f"Jogos realizados: {jogos_realizados}\n"
-                 f"Vitórias do Jogador Humano: {vitorias_jogador_humano}\n"
-                 f"Vitórias do Jogador Aleatório: {vitorias_jogador_aleatorio}\n"
-                 f"Vitórias do Jogador Estratégico: {vitorias_jogador_estrategico}\n"
-                 f"Empates: {empates}\n\n")
-    with open("relatorio_jogo_da_velha.txt", "a") as arquivo:
-        arquivo.write(relatorio)
+        tabuleiro[10] += 1
 
-def configurar_jogo():
-    global total_jogos, jogador_x, jogador_o
+    print("\nFim das partidas!")
+    print(f"Vitórias Jogador 1: {tabuleiro[12]}, Empates: {tabuleiro[13]}, Vitórias Jogador 2: {tabuleiro[14]}")
 
-    def salvar_configuracao():
-        global total_jogos, jogador_x, jogador_o
-        total_jogos = int(entry_jogos.get())
-        jogador_x = combo_x.get()
-        jogador_o = combo_o.get()
-        janela_configuracao.destroy()
+    gerarRelatorio(jogador1, jogador2)  # Chama a função para gerar o relatório
 
-    janela_configuracao = tk.Toplevel(root)
-    janela_configuracao.title("Configuração do Jogo")
+# Função de menu
+def menu():
+    continuar = 1
+    quantidadePartidas = 0
+    jogador1 = 'h'  # 'h' = humano / 'a' = aleatório / 'c' = campeão
+    jogador2 = 'c'  # 'h' = humano / 'a' = aleatório / 'c' = campeão
 
-    tk.Label(janela_configuracao, text="Número de Jogos:").grid(row=0, column=0)
-    entry_jogos = tk.Entry(janela_configuracao)
-    entry_jogos.grid(row=0, column=1)
+    while continuar == 1:
+        quantidadePartidas = int(input("Digite a quantidade de partidas: "))
+        jogador1 = input("Escolha o tipo de jogador 1: ['h', 'a', 'c']: ")
+        jogador2 = input("Escolha o tipo de jogador 2: ['h', 'a', 'c']: ")
+        game(jogador1, jogador2, quantidadePartidas)
+        limpaTabuleiroFinal()  # Limpa o histórico após todas as partidas serem jogadas
+        continuar = int(input("Digite 1 para continuar ou outro número para sair: "))
 
-    tk.Label(janela_configuracao, text="Jogador X (Primeiro):").grid(row=1, column=0)
-    combo_x = ttk.Combobox(janela_configuracao, values=["Humano", "Aleatório", "Estratégico"])
-    combo_x.grid(row=1, column=1)
-
-    tk.Label(janela_configuracao, text="Jogador O (Segundo):").grid(row=2, column=0)
-    combo_o = ttk.Combobox(janela_configuracao, values=["Humano", "Aleatório", "Estratégico"])
-    combo_o.grid(row=2, column=1)
-
-    tk.Button(janela_configuracao, text="Salvar", command=salvar_configuracao).grid(row=3, columnspan=2)
-
-# Criar a janela principal
-root = tk.Tk()
-root.title("Jogo da Velha")
-style = Style(theme="flatly")
-
-# Menu
-menu_bar = tk.Menu(root)
-root.config(menu=menu_bar)
-
-config_menu = tk.Menu(menu_bar, tearoff=0)
-menu_bar.add_cascade(label="Configuração", menu=config_menu)
-config_menu.add_command(label="Configurar Jogo", command=configurar_jogo)
-
-# Criar botões para o tabuleiro do jogo com tamanhos maiores e fonte aumentada
-botoes = []
-for i in range(3):
-    linha = []
-    for j in range(3):
-        botao = tk.Button(root, text='', width=10, height=5, font=('Helvetica', 20),
-                          command=lambda i=i, j=j: fazer_jogada(i, j))
-        botao.grid(row=i, column=j, padx=5, pady=5)
-        linha.append(botao)
-    botoes.append(linha)
-
-# Inicializar o tabuleiro do jogo e o jogador atual
-jogo = [['', '', ''] for _ in range(3)]
-jogador_atual = "X"
-
-root.mainloop()
+# Executa o menu
+menu()
